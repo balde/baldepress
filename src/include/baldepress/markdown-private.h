@@ -6,12 +6,12 @@
  * See the file COPYING.
  */
 
-#ifndef _BALDEPRESS_MARKDOWN
-#define _BALDEPRESS_MARKDOWN
+#ifndef _BALDEPRESS_MARKDOWN_PRIVATE_H
+#define _BALDEPRESS_MARKDOWN_PRIVATE_H
 
 #include <glib.h>
 #include <balde.h>
 
 gchar* parse_markdown(balde_app_t *app, const gchar *mkd_source);
 
-#endif
+#endif /* _BALDEPRESS_MARKDOWN_PRIVATE_H */
