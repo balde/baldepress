@@ -1,9 +1,11 @@
-check_PROGRAMS = 
+check_PROGRAMS = \
+	check_markdown
 
 TESTS = \
 	$(check_PROGRAMS)
 
-
+check_markdown_SOURCES = \
+	check_markdown.c
 
 AM_CFLAGS = \
 	$(all_includes) \
@@ -12,7 +14,7 @@ AM_CFLAGS = \
 	-I$(top_srcdir)/src/include
 
 AM_LDFLAGS = \
-	$(BALDE_CFLAGS) \
+	$(BALDE_LIBS) \
 	$(GLIB_LIBS) \
 	$(top_builddir)/src/libbaldepress/libbaldepress.la
 
