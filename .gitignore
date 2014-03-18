@@ -1,25 +1,41 @@
-# http://www.gnu.org/software/automake
+# Object files
+*.o
+*.ko
 
-Makefile.in
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Autotools
 Makefile
-
-# http://www.gnu.org/software/autoconf
-
-/autom4te.cache
+Makefile.in
+.deps
+.libs
+*.la
+*.lo
 /aclocal.m4
-/compile
 /configure
-/depcomp
-/install-sh
-/missing
 /config.*
+/autom4te.cache
+/libtool
 /stamp-h1
+.dirstamp
 
 # git-version-gen
 /build-aux/*
 !/build-aux/git-version-gen
 /.version
 
-*.o
-.deps
-.dirstamp
+# installed .m4 files
+/m4/*.m4

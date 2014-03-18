@@ -6,9 +6,21 @@ AC_INIT([baldepress], m4_esyscmd([build-aux/git-version-gen .tarball-version]),
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 
+# code changed: REVISION++.
+# interface changed: CURRENT++, REVISION=0.
+# interface changed (backwards compatible): AGE++, else AGE=0.
+CURRENT=0
+AGE=0
+REVISION=0
+
+LT_VERSION_INFO="$CURRENT:$REVISION:$AGE"
+AC_SUBST(LT_VERSION_INFO)
+
 AM_INIT_AUTOMAKE([foreign no-dist-gzip dist-xz subdir-objects])
 AC_CONFIG_HEADERS([config.h])
 m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
+
+LT_INIT
 
 AC_PROG_CC_C99
 AS_IF([test "x$ac_cv_prog_cc_c99" = "xno"], [
@@ -46,6 +58,7 @@ AC_CONFIG_FILES([
     Makefile
     src/Makefile
     src/include/Makefile
+    src/include/baldepress/Makefile
     src/libbaldepress/Makefile
     tests/Makefile
 ])
@@ -61,4 +74,6 @@ AS_ECHO("
         compiler:     ${CC}
         cflags:       ${CFLAGS}
         ldflags:      ${LDFLAGS}
+
+        valgrind:     ${VALGRIND}
 ")
