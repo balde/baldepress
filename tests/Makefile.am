@@ -11,11 +11,13 @@ AM_CFLAGS = \
 	$(all_includes) \
 	$(BALDE_CFLAGS) \
 	$(GLIB_CFLAGS) \
+	$(LIBGIT2_CFLAGS) \
 	-I$(top_srcdir)/src/include
 
 AM_LDFLAGS = \
 	$(BALDE_LIBS) \
 	$(GLIB_LIBS) \
+	$(LIBGIT2_LIBS) \
 	$(top_builddir)/src/libbaldepress/libbaldepress.la
 
 if USE_VALGRIND
