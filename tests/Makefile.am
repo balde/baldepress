@@ -1,8 +1,12 @@
 check_PROGRAMS = \
+	check_git \
 	check_markdown
 
 TESTS = \
 	$(check_PROGRAMS)
+
+check_git_SOURCES = \
+	check_git.c
 
 check_markdown_SOURCES = \
 	check_markdown.c

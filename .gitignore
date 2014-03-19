@@ -42,3 +42,4 @@ Makefile.in
 
 # tests
 /tests/check_markdown
+/tests/check_git

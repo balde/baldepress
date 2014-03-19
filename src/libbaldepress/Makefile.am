@@ -1,6 +1,7 @@
 lib_LTLIBRARIES = libbaldepress.la
 
 libbaldepress_la_SOURCES = \
+	git.c \
 	markdown.c
 
 libbaldepress_la_CFLAGS = \
