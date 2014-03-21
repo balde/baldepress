@@ -1,3 +1,0 @@
-SUBDIRS = \
-	libbaldepress \
-	include

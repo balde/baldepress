@@ -57,10 +57,9 @@ PKG_CHECK_MODULES([BALDE], [balde])
 
 AC_CONFIG_FILES([
     Makefile
-    src/Makefile
-    src/include/Makefile
-    src/include/baldepress/Makefile
-    src/libbaldepress/Makefile
+    include/Makefile
+    include/baldepress/Makefile
+    libbaldepress/Makefile
     tests/Makefile
 ])
 AC_OUTPUT

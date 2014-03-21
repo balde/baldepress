@@ -16,13 +16,13 @@ AM_CFLAGS = \
 	$(BALDE_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(LIBGIT2_CFLAGS) \
-	-I$(top_srcdir)/src/include
+	-I$(top_srcdir)/include
 
 AM_LDFLAGS = \
 	$(BALDE_LIBS) \
 	$(GLIB_LIBS) \
 	$(LIBGIT2_LIBS) \
-	$(top_builddir)/src/libbaldepress/libbaldepress.la
+	$(top_builddir)/libbaldepress/libbaldepress.la
 
 if USE_VALGRIND
 valgrind:

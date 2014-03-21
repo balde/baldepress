@@ -8,7 +8,7 @@ libbaldepress_la_CFLAGS = \
 	$(AM_CFLAGS) \
 	$(GLIB_CFLAGS) \
 	$(LIBGIT2_CFLAGS) \
-	-I$(top_srcdir)/src/include
+	-I$(top_srcdir)/include
 
 libbaldepress_la_LDFLAGS = \
 	$(AM_LDADD) \

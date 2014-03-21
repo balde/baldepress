@@ -1,5 +1,6 @@
 SUBDIRS = \
-	src \
+	libbaldepress \
+	include \
 	tests
 
 ACLOCAL_AMFLAGS = -I m4
