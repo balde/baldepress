@@ -12,6 +12,6 @@
 #include <glib.h>
 #include <balde.h>
 
-gchar* parse_markdown(balde_app_t *app, const gchar *mkd_source);
+gchar* bp_markdown_parse(balde_app_t *app, const gchar *mkd_source);
 
 #endif /* _BALDEPRESS_MARKDOWN_PRIVATE_H */

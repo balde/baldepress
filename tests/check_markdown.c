@@ -16,10 +16,10 @@
 
 
 void
-test_parse_markdown(void)
+test_markdown_parse(void)
 {
     balde_app_t *app = balde_app_init();
-    gchar *mkd = parse_markdown(app, "### Foo ###\n");
+    gchar *mkd = bp_markdown_parse(app, "### Foo ###\n");
     g_assert_cmpstr(mkd, ==, "<h3>Foo</h3>");
     g_free(mkd);
     balde_app_free(app);
@@ -30,6 +30,6 @@ int
 main(int argc, char** argv)
 {
     g_test_init(&argc, &argv, NULL);
-    g_test_add_func("/markdown/parse_markdown", test_parse_markdown);
+    g_test_add_func("/markdown/parse", test_markdown_parse);
     return g_test_run();
 }

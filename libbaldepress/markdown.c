@@ -18,7 +18,7 @@
 
 
 gchar*
-parse_markdown(balde_app_t *app, const gchar *mkd_source)
+bp_markdown_parse(balde_app_t *app, const gchar *mkd_source)
 {
     gchar *rv = NULL;
     gchar *text;
