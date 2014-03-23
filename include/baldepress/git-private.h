@@ -18,21 +18,20 @@ typedef struct {
     GDateTime *date;
     GDateTime *mdate;
     gchar *author;
-} baldepress_git_filectx_t;
+} bp_git_filectx_t;
 
 typedef struct {
     git_oid *revision_id;
     GSList *files;
-} baldepress_git_changectx_t;
+} bp_git_changectx_t;
 
 typedef struct {
     gchar *path;
     gchar *branch;
-    baldepress_git_changectx_t *changectx;
-} baldepress_git_repository_t;
+    bp_git_changectx_t *changectx;
+} bp_git_repository_t;
 
-void baldepress_git_check_error(balde_app_t *app, int error_code, const gchar *message);
-git_repository* baldepress_git_open_repository(balde_app_t *app, const gchar *path);
-GSList* baldepress_git_load_filectx_from_index(balde_app_t *app, git_repository *repo);
+void bp_git_check_error(balde_app_t *app, int error_code, const gchar *message);
+git_repository* bp_git_open_repository(balde_app_t *app, const gchar *path);
 
 #endif /* _BALDEPRESS_GIT_PRIVATE_H */
