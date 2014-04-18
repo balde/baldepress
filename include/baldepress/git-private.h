@@ -33,5 +33,7 @@ typedef struct {
 
 void bp_git_check_error(balde_app_t *app, int error_code, const gchar *message);
 git_repository* bp_git_open_repository(balde_app_t *app, const gchar *path);
+git_reference* bp_git_get_reference_from_branch(balde_app_t *app,
+    git_repository *repo, const gchar *branch);
 
 #endif /* _BALDEPRESS_GIT_PRIVATE_H */
