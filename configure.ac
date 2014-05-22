@@ -1,8 +1,8 @@
 AC_PREREQ(2.68)
 
 AC_INIT([baldepress], m4_esyscmd([build-aux/git-version-gen .tarball-version]),
-    [https://github.com/rafaelmartins/baldepress], [baldepress],
-    [https://github.com/rafaelmartins/baldepress])
+    [https://github.com/balde/baldepress], [baldepress],
+    [https://github.com/balde/baldepress])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -53,7 +53,7 @@ AC_SUBST(VALGRIND)
 PKG_PROG_PKG_CONFIG
 PKG_CHECK_MODULES([GLIB], [glib-2.0 >= 2.34])
 PKG_CHECK_MODULES([LIBGIT2], [libgit2 >= 0.20.0])
-PKG_CHECK_MODULES([BALDE], [balde])
+PKG_CHECK_MODULES([BALDE], [balde >= 0.1.1])
 
 AC_CONFIG_FILES([
     Makefile
